@@ -8,6 +8,8 @@ Dataset my_first_dataset {
   ]
   relationships: [
     relationship(public_activities.id > public_activation_codes.code, true)
+    ,
+    relationship(public_activation_codes.expired_at > public_activities.id, true)
   ]
   owner: 'thang1@gmail1.com'
 }
