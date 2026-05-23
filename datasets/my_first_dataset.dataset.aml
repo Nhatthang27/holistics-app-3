@@ -1,0 +1,13 @@
+Dataset my_first_dataset {
+  label: 'My First Dataset'
+  description: ''
+  data_source_name: 'holistics'
+  models: [
+    public_activation_codes,
+    public_activities
+  ]
+  relationships: [
+    relationship(public_activities.id > public_activation_codes.code, true)
+  ]
+  owner: 'thang1@gmail1.com'
+}
