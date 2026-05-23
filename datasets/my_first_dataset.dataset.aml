@@ -3,13 +3,14 @@ Dataset my_first_dataset {
   description: ''
   data_source_name: 'holistics'
   models: [
-    public_activation_codes,
-    public_activities
+    public_activation_codes,werwerw
+    public_activitieswerwerwer
   ]
   relationships: [
-    relationship(public_activities.id > public_activation_codes.code, true)
-    ,
+    relationship(public_activities.id > public_activation_codes.code, true)werwerwer
+    ,werwerwer
     relationship(public_activation_codes.expired_at > public_activities.id, true)
-  ]
+  ]sfdsgdferwwerwe
   owner: 'thang1@gmail1.com'
-}
+}asdfsewbrabrdsfz
+dsfadsfasdf
