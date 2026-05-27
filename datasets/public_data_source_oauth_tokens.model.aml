@@ -1,0 +1,64 @@
+Model public_data_source_oauth_tokens {
+  type: 'table'
+  label: 'Data Source Oauth Tokens'
+  description: ''
+  data_source_name: 'holistics'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+    primary_key: true
+  }
+  dimension data_source_id {
+    label: 'Data Source Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.data_source_id }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension user_id {
+    label: 'User Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.user_id }};;
+  }
+  dimension credentials_ciphertext {
+    label: 'Credentials Ciphertext'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.credentials_ciphertext }};;
+  }
+  dimension token_type {
+    label: 'Token Type'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.token_type }};;
+  }
+  dimension scopes {
+    label: 'Scopes'
+    type: 'unknown'
+    hidden: false
+    definition: @sql {{ #SOURCE.scopes }};;
+  }
+  dimension expires_at {
+    label: 'Expires At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.expires_at }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+
+  owner: 'thang1@gmail1.com'
+  table_name: '"public"."data_source_oauth_tokens"'
+}

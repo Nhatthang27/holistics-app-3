@@ -1,0 +1,58 @@
+Model public_external_user_items {
+  type: 'table'
+  label: 'External User Items'
+  description: ''
+  data_source_name: 'holistics'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+    primary_key: true
+  }
+  dimension item_type {
+    label: 'Item Type'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.item_type }};;
+  }
+  dimension item_id {
+    label: 'Item Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.item_id }};;
+  }
+  dimension is_personal {
+    label: 'Is Personal'
+    type: 'truefalse'
+    hidden: false
+    definition: @sql {{ #SOURCE.is_personal }};;
+  }
+  dimension owner_id {
+    label: 'Owner Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.owner_id }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+
+  owner: 'thang1@gmail1.com'
+  table_name: '"public"."external_user_items"'
+}

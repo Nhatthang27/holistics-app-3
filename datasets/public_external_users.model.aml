@@ -1,0 +1,64 @@
+Model public_external_users {
+  type: 'table'
+  label: 'External Users'
+  description: ''
+  data_source_name: 'holistics'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+    primary_key: true
+  }
+  dimension client_user_id {
+    label: 'Client User Id'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.client_user_id }};;
+  }
+  dimension external_org_id {
+    label: 'External Org Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.external_org_id }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension user_id {
+    label: 'User Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.user_id }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+  dimension email {
+    label: 'Email'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.email }};;
+  }
+  dimension configs {
+    label: 'Configs'
+    type: 'unknown'
+    hidden: false
+    definition: @sql {{ #SOURCE.configs }};;
+  }
+
+  owner: 'thang1@gmail1.com'
+  table_name: '"public"."external_users"'
+}

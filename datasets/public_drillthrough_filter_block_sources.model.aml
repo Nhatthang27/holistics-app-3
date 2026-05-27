@@ -1,0 +1,94 @@
+Model public_drillthrough_filter_block_sources {
+  type: 'table'
+  label: 'Drillthrough Filter Block Sources'
+  description: ''
+  data_source_name: 'holistics'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+    primary_key: true
+  }
+  dimension filter_block_uname {
+    label: 'Filter Block Uname'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.filter_block_uname }};;
+  }
+  dimension data_set_id {
+    label: 'Data Set Id'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.data_set_id }};;
+  }
+  dimension model_id {
+    label: 'Model Id'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.model_id }};;
+  }
+  dimension field_name {
+    label: 'Field Name'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.field_name }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+  dimension dashboard_uname {
+    label: 'Dashboard Uname'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.dashboard_uname }};;
+  }
+  dimension source_type {
+    label: 'Source Type'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.source_type }};;
+  }
+  dimension aggregation {
+    label: 'Aggregation'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.aggregation }};;
+  }
+  dimension index {
+    label: 'Index'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.index }};;
+  }
+  dimension sources {
+    label: 'Sources'
+    type: 'unknown'
+    hidden: false
+    definition: @sql {{ #SOURCE.sources }};;
+  }
+  dimension excluded_sources {
+    label: 'Excluded Sources'
+    type: 'unknown'
+    hidden: false
+    definition: @sql {{ #SOURCE.excluded_sources }};;
+  }
+
+  owner: 'thang1@gmail1.com'
+  table_name: '"public"."drillthrough_filter_block_sources"'
+}

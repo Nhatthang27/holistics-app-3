@@ -1,0 +1,40 @@
+Model public_email_dests {
+  type: 'table'
+  label: 'Email Dests'
+  description: ''
+  data_source_name: 'holistics'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+    primary_key: true
+  }
+  dimension title {
+    label: 'Title'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.title }};;
+  }
+  dimension recipients {
+    label: 'Recipients'
+    type: 'unknown'
+    hidden: false
+    definition: @sql {{ #SOURCE.recipients }};;
+  }
+  dimension options {
+    label: 'Options'
+    type: 'unknown'
+    hidden: false
+    definition: @sql {{ #SOURCE.options }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+
+  owner: 'thang1@gmail1.com'
+  table_name: '"public"."email_dests"'
+}

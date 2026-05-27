@@ -1,0 +1,46 @@
+Model public_aml_compiled_caches_metadata {
+  type: 'table'
+  label: 'Aml Compiled Caches Metadata'
+  description: ''
+  data_source_name: 'holistics'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+    primary_key: true
+  }
+  dimension aml_compiled_cache_id {
+    label: 'Aml Compiled Cache Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.aml_compiled_cache_id }};;
+  }
+  dimension expired_at {
+    label: 'Expired At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.expired_at }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+
+  owner: 'thang1@gmail1.com'
+  table_name: '"public"."aml_compiled_caches_metadata"'
+}

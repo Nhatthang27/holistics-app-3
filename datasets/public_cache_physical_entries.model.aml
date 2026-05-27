@@ -1,0 +1,82 @@
+Model public_cache_physical_entries {
+  type: 'table'
+  label: 'Cache Physical Entries'
+  description: ''
+  data_source_name: 'holistics'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+    primary_key: true
+  }
+  dimension logical_key {
+    label: 'Logical Key'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.logical_key }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension user_id {
+    label: 'User Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.user_id }};;
+  }
+  dimension num_rows {
+    label: 'Num Rows'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.num_rows }};;
+  }
+  dimension columns {
+    label: 'Columns'
+    type: 'unknown'
+    hidden: false
+    definition: @sql {{ #SOURCE.columns }};;
+  }
+  dimension extra_info {
+    label: 'Extra Info'
+    type: 'unknown'
+    hidden: false
+    definition: @sql {{ #SOURCE.extra_info }};;
+  }
+  dimension queryable_location {
+    label: 'Queryable Location'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.queryable_location }};;
+  }
+  dimension saved_at {
+    label: 'Saved At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.saved_at }};;
+  }
+  dimension expired_at {
+    label: 'Expired At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.expired_at }};;
+  }
+  dimension physical_location {
+    label: 'Physical Location'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.physical_location }};;
+  }
+  dimension cache_size {
+    label: 'Cache Size'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.cache_size }};;
+  }
+
+  owner: 'thang1@gmail1.com'
+  table_name: '"public"."cache_physical_entries"'
+}

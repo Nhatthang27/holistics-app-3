@@ -1,0 +1,46 @@
+Model public_cache_logical_entries {
+  type: 'table'
+  label: 'Cache Logical Entries'
+  description: ''
+  data_source_name: 'holistics'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+    primary_key: true
+  }
+  dimension key {
+    label: 'Key'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.key }};;
+  }
+  dimension physical_id {
+    label: 'Physical Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.physical_id }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+
+  owner: 'thang1@gmail1.com'
+  table_name: '"public"."cache_logical_entries"'
+}

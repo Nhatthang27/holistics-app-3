@@ -1,0 +1,40 @@
+Model public_job_origins {
+  type: 'table'
+  label: 'Job Origins'
+  description: ''
+  data_source_name: 'holistics'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+    primary_key: true
+  }
+  dimension job_id {
+    label: 'Job Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.job_id }};;
+  }
+  dimension origin_id {
+    label: 'Origin Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.origin_id }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+
+  owner: 'thang1@gmail1.com'
+  table_name: '"public"."job_origins"'
+}

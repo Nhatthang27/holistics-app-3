@@ -1,0 +1,58 @@
+Model public_data_source_passthrough_configs {
+  type: 'table'
+  label: 'Data Source Passthrough Configs'
+  description: ''
+  data_source_name: 'holistics'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+    primary_key: true
+  }
+  dimension data_source_id {
+    label: 'Data Source Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.data_source_id }};;
+  }
+  dimension data_source_field {
+    label: 'Data Source Field'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.data_source_field }};;
+  }
+  dimension user_attribute_name {
+    label: 'User Attribute Name'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.user_attribute_name }};;
+  }
+  dimension allow_empty {
+    label: 'Allow Empty'
+    type: 'truefalse'
+    hidden: false
+    definition: @sql {{ #SOURCE.allow_empty }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+
+  owner: 'thang1@gmail1.com'
+  table_name: '"public"."data_source_passthrough_configs"'
+}

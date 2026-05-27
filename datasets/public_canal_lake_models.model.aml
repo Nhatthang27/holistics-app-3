@@ -1,0 +1,40 @@
+Model public_canal_lake_models {
+  type: 'table'
+  label: 'Canal Lake Models'
+  description: ''
+  data_source_name: 'holistics'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+    primary_key: true
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension cache_physical_id {
+    label: 'Cache Physical Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.cache_physical_id }};;
+  }
+  dimension cache_logical_key {
+    label: 'Cache Logical Key'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.cache_logical_key }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+
+  owner: 'thang1@gmail1.com'
+  table_name: '"public"."canal_lake_models"'
+}

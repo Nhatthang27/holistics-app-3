@@ -1,0 +1,76 @@
+Model public_aml_compiled_caches {
+  type: 'table'
+  label: 'Aml Compiled Caches'
+  description: ''
+  data_source_name: 'holistics'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+    primary_key: true
+  }
+  dimension binding_type {
+    label: 'Binding Type'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.binding_type }};;
+  }
+  dimension binding_name {
+    label: 'Binding Name'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.binding_name }};;
+  }
+  dimension data {
+    label: 'Data'
+    type: 'unknown'
+    hidden: false
+    definition: @sql {{ #SOURCE.data }};;
+  }
+  dimension version_hash {
+    label: 'Version Hash'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.version_hash }};;
+  }
+  dimension project_id {
+    label: 'Project Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.project_id }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+  dimension text_searchable {
+    label: 'Text Searchable'
+    type: 'unknown'
+    hidden: false
+    definition: @sql {{ #SOURCE.text_searchable }};;
+  }
+  dimension filterable_properties {
+    label: 'Filterable Properties'
+    type: 'unknown'
+    hidden: false
+    definition: @sql {{ #SOURCE.filterable_properties }};;
+  }
+
+  owner: 'thang1@gmail1.com'
+  table_name: '"public"."aml_compiled_caches"'
+}

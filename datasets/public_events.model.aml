@@ -1,0 +1,46 @@
+Model public_events {
+  type: 'table'
+  label: 'Events'
+  description: ''
+  data_source_name: 'holistics'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+    primary_key: true
+  }
+  dimension event_type {
+    label: 'Event Type'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.event_type }};;
+  }
+  dimension data {
+    label: 'Data'
+    type: 'unknown'
+    hidden: false
+    definition: @sql {{ #SOURCE.data }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+
+  owner: 'thang1@gmail1.com'
+  table_name: '"public"."events"'
+}

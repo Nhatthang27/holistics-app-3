@@ -1,0 +1,58 @@
+Model public_list_values {
+  type: 'table'
+  label: 'List Values'
+  description: ''
+  data_source_name: 'holistics'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+    primary_key: true
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension key {
+    label: 'Key'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.key }};;
+  }
+  dimension values {
+    label: 'Values'
+    type: 'unknown'
+    hidden: false
+    definition: @sql {{ #SOURCE.values }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+  dimension key_type {
+    label: 'Key Type'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.key_type }};;
+  }
+  dimension expires_at {
+    label: 'Expires At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.expires_at }};;
+  }
+
+  owner: 'thang1@gmail1.com'
+  table_name: '"public"."list_values"'
+}

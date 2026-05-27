@@ -1,0 +1,46 @@
+Model public_data_transform_schedules {
+  type: 'table'
+  label: 'Data Transform Schedules'
+  description: ''
+  data_source_name: 'holistics'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+    primary_key: true
+  }
+  dimension data_transform_id {
+    label: 'Data Transform Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.data_transform_id }};;
+  }
+  dimension schedule_id {
+    label: 'Schedule Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.schedule_id }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+
+  owner: 'thang1@gmail1.com'
+  table_name: '"public"."data_transform_schedules"'
+}
