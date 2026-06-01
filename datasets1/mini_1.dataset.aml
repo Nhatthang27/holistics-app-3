@@ -1,0 +1,20 @@
+Dataset mini1 {
+  label: 'mini',
+  description: ''
+  data_source_name: 'holistics'
+  models: [
+    public_activation_codes,
+    public_activities,
+    public_adhoc_queries,
+    public_adls2_dests,
+    public_aml_compiled_caches,
+    public_aml_compiled_caches_metadata,
+    public_job_origins,
+    public_last_runs,
+    public_personal_categories,
+    public_personal_items,
+    public_pinned_items,
+    public_plan_feature_rules
+  ]
+  relationships: []
+}

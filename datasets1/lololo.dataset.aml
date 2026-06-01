@@ -1,0 +1,10 @@
+Dataset lololo {
+  label: 'lololo',
+  description: ''
+  data_source_name: 'holistics'
+  models: [
+    public_activation_codes,
+    public_activities
+  ]
+  relationships: []
+}

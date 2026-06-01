@@ -1,0 +1,13 @@
+Dataset lalalala2 {
+  label: 'lalalala2',
+  description: ''
+  data_source_name: 'holistics'
+  models: [
+    public_app_notifications,
+    public_ar_internal_metadata,
+    public_cache_logical_entries,
+    public_cache_physical_entries,
+    public_cache_settings
+  ]
+  relationships: []
+}

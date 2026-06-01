@@ -1,0 +1,12 @@
+Dataset oneoneone {
+  label: 'oneoneone'
+  description: ''
+  data_source_name: 'holistics'
+  models: [
+    public_pinned_items,
+    public_plan_feature_rules
+  ]
+  relationships: [
+    relationship(public_pinned_items.source_type > public_plan_feature_rules.feature_rule_id, true)
+  ]
+}

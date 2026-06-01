@@ -1,0 +1,11 @@
+Dataset mini {
+  label: 'mini',
+  description: ''
+  data_source_name: 'holistics'
+  models: [
+    public_activation_codes,
+    public_activities,
+    public_adhoc_queries
+  ]
+  relationships: []
+}

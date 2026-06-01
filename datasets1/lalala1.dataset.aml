@@ -1,0 +1,13 @@
+Dataset lalala1 {
+  label: 'lalala1'
+  description: ''
+  data_source_name: 'holistics'
+  models: [
+    public_activation_codes,
+    public_activities
+  ]
+  relationships: [
+    relationship(public_activation_codes.activatable_id > public_activities.created_at, true),
+    relationship(public_activation_codes.settings > public_activities.owner_id, true)
+  ]
+}

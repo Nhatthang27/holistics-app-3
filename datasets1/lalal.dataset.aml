@@ -1,0 +1,10 @@
+Dataset lalal {
+  label: 'lalal',
+  description: ''
+  data_source_name: 'holistics'
+  models: [
+    public_app_notifications,
+    public_ar_internal_metadata
+  ]
+  relationships: []
+}

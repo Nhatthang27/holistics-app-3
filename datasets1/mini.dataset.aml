@@ -1,0 +1,18 @@
+Dataset mini12 {
+  label: 'mini'
+  description: ''
+  data_source_name: 'holistics'
+  models: [
+    public_activation_codes,
+    public_activities,
+    public_adhoc_queries,
+    public_adls2_dests,
+    public_aml_compiled_caches,
+    public_aml_compiled_caches_metadata
+  ]
+  relationships: [
+    relationship(public_activities.owner_type > public_adhoc_queries.updated_at, false),
+    relationship(public_activities.impersonator_id > public_aml_compiled_caches.binding_name, false),
+    relationship(public_activities.trackable_type > public_aml_compiled_caches_metadata.expired_at, true)
+  ]
+}

@@ -1,0 +1,10 @@
+Dataset two {
+  label: 'two',
+  description: ''
+  data_source_name: 'holistics'
+  models: [
+    public_personal_categories,
+    public_personal_items
+  ]
+  relationships: []
+}
